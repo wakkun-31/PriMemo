@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.wata.primemo">
+
+    <application
+        android:allowBackup="true"
+        android:debuggable="true"
+        android:icon="@mipmap/primemo_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/primemo_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="HardcodedDebugMode,LockedOrientationActivity">
+        <activity android:name=".view.PastItemActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".view.PastListActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTop">
+        </activity>
+        <activity android:name=".view.TodayItemActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTop">
+        </activity>
+        <activity android:name=".view.SelectShoppingItemActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"
+            android:launchMode="singleTop">
+        </activity>
+        <activity android:name=".view.MainTopActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

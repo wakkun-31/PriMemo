@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_past_date_line"
+    android:alpha="0.8"
+    android:paddingHorizontal="13dp"
+    android:paddingVertical="5dp">
+
+<!--    Todo (今後)アイコンや場所項目追加で変更要-->
+<!--    <ImageView-->
+<!--        android:id="@+id/iv_date_icon"-->
+<!--        android:layout_width="40dp"-->
+<!--        android:layout_height="40dp"-->
+<!--        android:layout_marginTop="5dp"-->
+<!--        android:layout_marginLeft="10dp"-->
+<!--        android:layout_marginRight="5dp"-->
+<!--        android:visibility="gone"-->
+<!--        android:background="#00FFFFFF"/>-->
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_gravity="center_vertical"
+        android:textSize="20sp"/>
+
+<!--    <TextView-->
+<!--        android:id="@+id/tv_location"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginHorizontal="5dp"-->
+<!--        android:layout_gravity="center_vertical"-->
+<!--        android:visibility="gone"-->
+<!--        android:textSize="20sp"/>-->
+
+    </LinearLayout>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_shopping_item_list_line"
+    android:paddingHorizontal="1dp"
+    android:paddingVertical="1dp"
+    android:weightSum="10">
+
+    <ImageView
+        android:id="@+id/item_icon"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_weight="1"
+        android:layout_marginRight="5dp"/>
+
+    <TextView
+        android:id="@+id/item_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="7.8"
+        android:layout_gravity="center_vertical"
+        android:textSize="15sp"/>
+
+    <ImageView
+        android:id="@+id/icon_multiplication"
+        android:layout_width="0dp"
+        android:layout_height="10dp"
+        android:layout_weight="0.3"
+        android:layout_marginLeft="5dp"
+        android:layout_gravity="center"
+        android:tag="multi"
+        android:background="@drawable/multiplication_icon"
+        android:alpha="1"/>
+
+    <TextView
+        android:id="@+id/item_number"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_gravity="center_vertical"
+        android:enabled="false"
+        android:tag="num"
+        android:textSize="18sp"
+        android:textColor="#000000"
+        android:layout_weight="0.8"/>
+
+<!--    以下保存用-->
+<!--    <ImageView-->
+<!--        android:id="@+id/item_icon"-->
+<!--        android:layout_width="30dp"-->
+<!--        android:layout_height="30dp"-->
+<!--        android:layout_marginRight="5dp"/>-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/item_name"-->
+<!--        android:layout_width="150dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_weight="8.5"-->
+<!--        android:textSize="15sp"/>-->
+
+<!--    <ImageView-->
+<!--        android:id="@+id/icon_multiplication"-->
+<!--        android:layout_width="10dp"-->
+<!--        android:layout_height="10dp"-->
+<!--        android:layout_weight="0.2"-->
+<!--        android:layout_marginTop="12dp"-->
+<!--        android:tag="multi"-->
+<!--        android:background="@drawable/multiplication_icon"-->
+<!--        android:alpha="0.7"/>-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/item_number"-->
+<!--        android:layout_width="8dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:enabled="false"-->
+<!--        android:tag="num"-->
+<!--        android:textSize="10sp"-->
+<!--        android:textColor="#000000"-->
+<!--        android:layout_weight="1"/>-->
+
+</LinearLayout>

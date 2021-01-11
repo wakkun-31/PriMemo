@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:weightSum="100"
+    tools:context=".view.SelectShoppingItemActivity">
+
+<!--  ダミーフォーカス(javaでrequestFocus要)  -->
+    <View
+        android:id="@+id/dummy_focus"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="0"
+        android:focusable="true"
+        android:focusableInTouchMode="true"/>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp">
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_gravity="left"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp">
+            
+            <Button
+                android:id="@+id/btn_category_vegetables"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/food_button_design_selector"
+                android:stateListAnimator="@drawable/food_button_anim_selector"
+                android:text="@string/food_category_vegetables"
+                android:textColor="@color/food_button_color_selector"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_marginRight="2dp"/>
+
+            <Button
+                android:id="@+id/btn_category_meat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/food_button_design_selector"
+                android:stateListAnimator="@drawable/food_button_anim_selector"
+                android:text="@string/food_category_meat"
+                android:textColor="@color/food_button_color_selector"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_marginRight="2dp"/>
+
+            <Button
+                android:id="@+id/btn_category_fish"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/food_button_design_selector"
+                android:stateListAnimator="@drawable/food_button_anim_selector"
+                android:text="@string/food_category_fish"
+                android:textColor="@color/food_button_color_selector"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_marginRight="2dp"/>
+
+            <Button
+                android:id="@+id/btn_category_spice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/food_button_design_selector"
+                android:stateListAnimator="@drawable/food_button_anim_selector"
+                android:text="@string/food_category_spice"
+                android:textColor="@color/food_button_color_selector"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_marginRight="2dp"/>
+
+            <Button
+                android:id="@+id/btn_category_bread"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/food_button_design_selector"
+                android:stateListAnimator="@drawable/food_button_anim_selector"
+                android:text="@string/food_category_bread"
+                android:textColor="@color/food_button_color_selector"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_marginRight="2dp"/>
+
+            <Button
+                android:id="@+id/btn_category_processed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/food_button_design_selector"
+                android:stateListAnimator="@drawable/food_button_anim_selector"
+                android:text="@string/food_category_processed"
+                android:textColor="@color/food_button_color_selector"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_marginRight="2dp"/>
+
+            <Button
+                android:id="@+id/btn_category_snack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/food_button_design_selector"
+                android:stateListAnimator="@drawable/food_button_anim_selector"
+                android:text="@string/food_category_snack"
+                android:textColor="@color/food_button_color_selector"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_marginRight="2dp"/>
+
+            <Button
+                android:id="@+id/btn_category_frozen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/food_button_design_selector"
+                android:stateListAnimator="@drawable/food_button_anim_selector"
+                android:text="@string/food_category_frozen"
+                android:textColor="@color/food_button_color_selector"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_marginRight="2dp"/>
+
+            <Button
+                android:id="@+id/btn_category_alcohol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/food_button_design_selector"
+                android:stateListAnimator="@drawable/food_button_anim_selector"
+                android:text="@string/food_category_alcohol"
+                android:textColor="@color/food_button_color_selector"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_marginRight="2dp"/>
+
+            <Button
+                android:id="@+id/btn_category_daily_necessities"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/food_button_design_selector"
+                android:stateListAnimator="@drawable/food_button_anim_selector"
+                android:text="@string/food_category_daily_necessities"
+                android:textColor="@color/food_button_color_selector"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_marginRight="2dp"/>
+
+            <Button
+                android:id="@+id/btn_category_other"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/other_button_design_selector"
+                android:stateListAnimator="@drawable/food_button_anim_selector"
+                android:text="@string/food_category_other"
+                android:textColor="@color/food_button_color_selector"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_marginRight="2dp"/>
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <ProgressBar
+        android:id="@+id/pb_get_select_item"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:indeterminate="true"
+        android:visibility="gone"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="82"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:layout_marginHorizontal="5dp"
+        android:orientation="horizontal">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scr_item_list_in_category"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/lo_item_list_in_category"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="1dp"
+                    android:layout_marginVertical="1dp"
+                    android:scrollbars="vertical"
+                    android:overScrollMode="never"/>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <ScrollView
+            android:id="@+id/scr_item_list_in_select"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:paddingRight="1dp"
+            android:tag="scr_select_item"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/lo_item_list_in_select"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="15"
+        android:layout_gravity="center"
+        android:weightSum="10"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp">
+
+        <Button
+            android:id="@+id/btn_save_only"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1.5"
+            android:background="@drawable/system_button_design_selector"
+            android:stateListAnimator="@drawable/system_button_anim_selector"
+            android:text="@string/btn_save"
+            android:textColor="@color/system_text_color_selector"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            android:typeface="sans"/>
+
+        <Button
+            android:id="@+id/btn_go_today_item_list"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="7.7"
+            android:background="@drawable/system_button_design_selector"
+            android:stateListAnimator="@drawable/system_button_anim_selector"
+            android:text="@string/btn_today_item"
+            android:textColor="@color/system_text_color_selector"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            android:typeface="sans"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"/>
+
+        <Button
+            android:id="@+id/btn_garbage_can"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="0.8"
+            android:tag="img_garbage"
+            android:background="@drawable/iv_garbage_can"
+            android:stateListAnimator="@drawable/system_button_anim_selector"
+            android:text="@string/btn_drop_delete"
+            android:textColor="#727171"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            android:typeface="sans" />
+
+    </LinearLayout>
+
+</LinearLayout>

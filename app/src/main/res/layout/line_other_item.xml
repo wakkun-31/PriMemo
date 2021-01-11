@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="1dp"
+    android:paddingVertical="1dp"
+    android:weightSum="10">
+
+    <ImageView
+        android:id="@+id/item_icon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginRight="5dp"/>
+
+    <TextView
+        android:id="@+id/category_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:visibility="gone"
+        android:enabled="false"/>
+
+    <TextView
+        android:id="@+id/category_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:visibility="gone"
+        android:enabled="false"/>
+
+    <TextView
+        android:id="@+id/item_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:visibility="gone"
+        android:enabled="false"/>
+
+    <com.wata.primemo.model.CustomDragEditText
+        android:id="@+id/item_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="7.8"
+        android:textSize="10sp"
+        android:hint="@string/hint_message_input_item_name"
+        android:nextFocusDown="@id/item_number"
+        android:imeOptions="actionNext"
+        android:inputType="text"
+        android:maxLines="1"/>
+
+    <ImageView
+        android:id="@+id/icon_multiplication"
+        android:layout_width="0dp"
+        android:layout_height="10dp"
+        android:layout_weight="0.7"
+        android:layout_gravity="center_vertical"
+        android:tag="multi"
+        android:visibility="visible"
+        android:background="@drawable/multiplication_icon"
+        android:alpha="0.7"/>
+
+    <com.wata.primemo.model.CustomDragEditText
+        android:id="@+id/item_number"
+        android:tag="num"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginHorizontal="2dp"
+        android:layout_weight="1.2"
+        android:text="1"
+        android:textSize="12sp"
+        android:textColor="#000000"
+        android:nextFocusDown="@id/item_name"
+        android:imeOptions="actionNext"
+        android:visibility="visible"
+        android:inputType="number"
+        android:maxLines="1"
+        android:maxLength="2"
+        android:min="2"/>
+
+</LinearLayout>

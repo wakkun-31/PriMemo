@@ -1,0 +1,53 @@
+<resources>
+
+    <!--  アプリ名  -->
+    <string name="app_name">PriMemo</string>
+
+    <!--  ボタン  -->
+    <string name="btn_today_item">今日の買い物リスト</string>
+    <string name="btn_past_list">過去の買い物リスト</string>
+    <string name="btn_start_memo">スタート</string>
+    <string name="btn_back">戻る</string>
+    <string name="btn_drop_delete">削除</string>
+    <string name="btn_save">保存</string>
+    <string name="btn_edit">編集</string>
+    <string name="btn_top">トップ</string>
+
+    <!--  ダイアログ  -->
+    <string name="title_progress_dialog">処理中</string>
+    <string name="message_progress_dialog">しばらくお待ちください</string>
+
+    <!--  SelectItemActivity画面  -->
+    <string name="txt_shopping_basket">買い物かご</string>
+    <string name="toast_message_save_only_success">本日の買い物リストを、保存しました</string>
+    <string name="toast_message_drop_unnecessary">間違えて選択した商品については、\nこちらへドロップしてください</string>
+    <string name="toast_message_please_drop">商品をドロップして、本日のお買い物リストを作成してください</string>
+    <string name="hint_message_input_item_name">商品名を入力して下さい</string>
+
+    <!--  TodayItemActivity画面  -->
+    <string name="title_today_shopping_list">本日の買い物リスト</string>
+    <string name="message_not_yet_memo">まだ、本日の買い物リストを、作っていません</string>
+
+    <!--  PastListActivity画面  -->
+    <string name="title_past_shopping_history_list">\t今までのお買い物履歴</string>
+    <string name="message_not_yet_shopping">今までお買い物していません</string>
+    <string name="message_history">　のお買い物履歴</string>
+
+    <!--  PastItemActivity画面  -->
+    <string name="title_past_shopping_item_list">お買い物履歴</string>
+
+
+    <!--  品物カテゴリ  -->
+    <string name="food_category_vegetables">野菜</string>
+    <string name="food_category_meat">肉</string>
+    <string name="food_category_fish">魚介</string>
+    <string name="food_category_spice">調味料</string>
+    <string name="food_category_bread">パン</string>
+    <string name="food_category_processed">加工食品</string>
+    <string name="food_category_snack">お菓子</string>
+    <string name="food_category_frozen">冷凍品</string>
+    <string name="food_category_alcohol">お酒</string>
+    <string name="food_category_daily_necessities">日用品</string>
+    <string name="food_category_other">その他</string>
+
+</resources>
