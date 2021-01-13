@@ -55,9 +55,7 @@ public class TodayItemActivity extends AppCompatActivity
         mController.setListener(this);
 
         // DBに今日のレコードがある場合は、取得して選択レイアウトへ表示する
-        if(mController.getIsFromTop()) {
-            mController.getTodayShoppingItemList();
-        }
+        mController.getTodayShoppingItemList();
 
         Log.d(TAG, "onCreate() this is " + this + ".");
         Log.d(TAG, "onCreate end!");
@@ -191,7 +189,7 @@ public class TodayItemActivity extends AppCompatActivity
         Log.d(TAG, "displayTodayShoppingList start.");
 
         dismissProgressDialog();
-        // Todo 要
+
         mRvTodayItemList.setVisibility(View.VISIBLE);
         mTvNotMemo.setVisibility(View.GONE);
 

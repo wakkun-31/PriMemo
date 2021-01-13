@@ -26,6 +26,7 @@ public class DateItem implements Cloneable{
     public void setDate(String date) { this.date = date; }
 //    public void setDateIconResource(int resource) { this.dateIconResource = resource; }
 
+    @Override
     public DateItem clone() {
         DateItem ret = new DateItem();
         try {

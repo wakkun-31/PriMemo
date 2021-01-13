@@ -143,7 +143,6 @@ public class ShoppingItemDbUtility {
                         final boolean isNull = isNullRecord;
 
                         // DB処理はすべて非同期のため、コールバックはHandlerを使用してUIスレッドへ通知
-                        // Todo
                         if (callback != null) {
                             new Handler(Looper.getMainLooper()).post(new Runnable() {
                                 @Override

@@ -41,6 +41,7 @@ public class ShoppingItem implements Cloneable{
         return isNull;
     }
 
+    @Override
     public ShoppingItem clone() {
         ShoppingItem ret = new ShoppingItem();
         try {

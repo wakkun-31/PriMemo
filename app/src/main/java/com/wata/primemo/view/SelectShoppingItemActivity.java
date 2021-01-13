@@ -27,7 +27,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.ProgressBar;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -338,7 +337,7 @@ public class SelectShoppingItemActivity extends AppCompatActivity
 
             case R.id.btn_garbage_can:
                 // トースト表示
-                displayToastInCenter(R.string.toast_message_drop_unnecessary);
+                displayShortToastInCenter(R.string.toast_message_drop_unnecessary);
                 break;
 
             case R.id.btn_category_other:
@@ -347,7 +346,6 @@ public class SelectShoppingItemActivity extends AppCompatActivity
                 break;
 
             case R.id.btn_go_today_item_list:
-                showProgressDialog();
 
                 // 押下で右画面の選択した商品リストをデータベースへ保存し、
                 // 本日の商品リストページへ遷移する
@@ -546,8 +544,6 @@ public class SelectShoppingItemActivity extends AppCompatActivity
     @Override
     public boolean onDrag(View v, DragEvent event) {
 
-        // Todo フォーカス可能なオブジェクトへドロップしたらFATAL
-        // Todo EditTextクラスをサブクラス化して、ドラッグリスナーをオーバーライドする必要あり？
         // 画面右側のレイアウトに対してのみリスナー処理
         Log.d(TAG, "DragEvent: " + event.getAction());
         switch(event.getAction()) {
@@ -788,7 +784,7 @@ public class SelectShoppingItemActivity extends AppCompatActivity
     public void displaySaveOnly(){
         Log.d(TAG, "displaySaveOnly(): start");
         dismissProgressDialog();
-        displayToastInCenter(R.string.toast_message_save_only_success);
+        displayShortToastInCenter(R.string.toast_message_save_only_success);
         Log.d(TAG, "displaySaveOnly(): end");
     }
 
@@ -796,7 +792,7 @@ public class SelectShoppingItemActivity extends AppCompatActivity
     public void displayNotYetMemo() {
         Log.d(TAG, "displayNotYetMemo(): start");
         dismissProgressDialog();
-        displayToastInCenter(R.string.toast_message_please_drop);
+        displayLongToastInCenter(R.string.toast_message_please_drop);
         Log.d(TAG, "displayNotYetMemo(): end");
     }
 
@@ -814,14 +810,25 @@ public class SelectShoppingItemActivity extends AppCompatActivity
     }
 
     /**
-     * 画面中央にトースト表示
+     * 画面中央にトースト表示(短い)
      */
-    private void displayToastInCenter(int resourceId){
+    private void displayShortToastInCenter(int resourceId){
         Log.d(TAG, "displayToastInCenter(): start");
         Toast toast = Toast.makeText(this, resourceId, Toast.LENGTH_SHORT);
         toast.setGravity(Gravity.CENTER, 0, 0);
         toast.show();
         Log.d(TAG, "displayToastInCenter(): end");
+    }
+
+    /**
+     * 画面中央にトースト表示（長い）
+     */
+    private void displayLongToastInCenter(int resourceId){
+        Log.d(TAG, "displayLongToastInCenter(): start");
+        Toast toast = Toast.makeText(this, resourceId, Toast.LENGTH_LONG);
+        toast.setGravity(Gravity.CENTER, 0, 0);
+        toast.show();
+        Log.d(TAG, "displayLongToastInCenter(): end");
     }
 
     // ============================================================================================
@@ -934,7 +941,6 @@ public class SelectShoppingItemActivity extends AppCompatActivity
         LinearLayout shoppingItemLine;
         ArrayList<ShoppingItem> selectList = new ArrayList<>();
 
-        // Todo
         for(int i=0; i < mSelectItemNewSize; i++){
             shoppingItemLine = (LinearLayout) mLinearSelectItemLayout.getChildAt(i);
 

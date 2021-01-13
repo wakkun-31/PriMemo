@@ -1,27 +1,34 @@
 package com.wata.primemo.view;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.transition.TransitionManager;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
+import com.wata.primemo.BuildConfig;
 import com.wata.primemo.R;
 import com.wata.primemo.controller.ShoppingItemController;
+import com.wata.primemo.view.viewparts.TopHelpFragment;
 
 public class MainTopActivity extends AppCompatActivity implements View.OnClickListener{
 
     private final String TAG = "MainTopActivity";
-    private final String PACKAGE_NAME = "com.wata.primemo";
+//    private final String PACKAGE_NAME = "com.wata.primemo";
+    private final String PACKAGE_NAME = BuildConfig.APPLICATION_ID;
 
     private ShoppingItemController mController;
 
     private Button btnStart;
     private Button btnToday;
     private Button btnPast;
-
+    private ImageButton btnHelp;
+    private TopHelpFragment mTopHelpFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,12 +82,15 @@ public class MainTopActivity extends AppCompatActivity implements View.OnClickLi
         btnStart = findViewById(R.id.btn_top_start);
         btnToday = findViewById(R.id.btn_top_today_item);
         btnPast = findViewById(R.id.btn_top_past_item);
+        btnHelp = findViewById(R.id.btn_help);
+        mTopHelpFragment = new TopHelpFragment();
     }
 
     public void setUIListener(){
         btnStart.setOnClickListener(this);
         btnToday.setOnClickListener(this);
         btnPast.setOnClickListener(this);
+        btnHelp.setOnClickListener(this);
     }
 
     // ============================================================================================
@@ -106,6 +116,18 @@ public class MainTopActivity extends AppCompatActivity implements View.OnClickLi
                 className = PACKAGE_NAME + ".view.PastListActivity";
                 break;
 
+            case R.id.btn_help:
+                // 簡単な説明フラグメントをインフレートする
+                FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+                ft.setCustomAnimations(android.R.anim.fade_in, android.R.anim.fade_out);
+                ft.replace(R.id.fl_help_info, mTopHelpFragment);
+                ft.commit();
+
+                // ヘルプフラグメントが全面に出ているとき、後面アクティビティ(MainTopActivity)に
+                // あるボタンが反応してしまうため、ボタンエリアをなくす
+                findViewById(R.id.fl_top_main).setVisibility(View.GONE);
+
+                break;
             default:
                 break;
         }
@@ -117,7 +139,7 @@ public class MainTopActivity extends AppCompatActivity implements View.OnClickLi
             intent.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
             startActivity(intent);
         } else {
-            Log.d(TAG, "onClick(): startActivity is failed");
+            Log.d(TAG, "onClick(): no intent action");
         }
     }
 }

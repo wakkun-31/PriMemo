@@ -17,6 +17,9 @@
     <string name="title_progress_dialog">処理中</string>
     <string name="message_progress_dialog">しばらくお待ちください</string>
 
+    <!--  ヘルプ  -->
+    <string name="title_help_info">～<u>簡単な使い方</u>～</string>
+
     <!--  SelectItemActivity画面  -->
     <string name="txt_shopping_basket">買い物かご</string>
     <string name="toast_message_save_only_success">本日の買い物リストを、保存しました</string>

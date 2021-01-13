@@ -5,7 +5,7 @@
 
     <application
         android:allowBackup="true"
-        android:debuggable="true"
+        android:debuggable="false"
         android:icon="@mipmap/primemo_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/primemo_launcher"

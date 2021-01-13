@@ -1,6 +1,5 @@
 package com.wata.primemo.controller;
 
-import android.app.ProgressDialog;
 import android.content.Context;
 import android.util.Log;
 
